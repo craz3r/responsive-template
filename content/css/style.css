@@ -1,0 +1,651 @@
+/*
+    Reset Styles
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+
+    Fonts
+
+*/
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?43514998');
+    src: url('../font/fontello.eot?43514998#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff2?43514998') format('woff2'),
+    url('../font/fontello.woff?43514998') format('woff'),
+    url('../font/fontello.ttf?43514998') format('truetype'),
+    url('../font/fontello.svg?43514998#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+
+    font-variant: normal;
+    text-transform: none;
+    
+    line-height: 1em;
+    
+    margin-left: .2em;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel:before { content: '\e800'; } 
+.icon-right-open-1:before { content: '\e801'; } 
+.icon-right-open:before { content: '\f006'; } 
+.icon-menu-1:before { content: '\f008'; } 
+.icon-menu:before { content: '\f0c9'; } 
+
+
+/*
+    User styles
+*/
+
+
+@media only screen and (min-width: 320px) {
+
+    html {
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    section > h2 {
+        display: none;
+    }
+
+    .next-link {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        height: 2.3rem;
+        background-color: #373c3f;
+        position: relative;
+    }
+
+    #menu {
+        display: none;
+        position: absolute;
+        left: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1em 0;
+        background-color: #373c3f;
+        color: #ebebeb;
+        border-bottom: 1px solid #101316;
+        text-decoration: none;
+        transition: color, background-color .3s ease-in;
+    }
+
+    .menu a:hover {
+        color: #fff;
+        background-color: #101316;
+    }
+
+    .menu li:last-child a {
+        border: none;
+    }
+
+    .logo {
+        line-height: 2.3rem;
+        margin-left: 1.125rem;
+        font-size: 0.8rem;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: #ebebeb;
+        transition: color .3s ease-in;
+    }
+
+    .logo a:hover {
+        color: #fff;
+    }
+
+    .nav-thumb {
+        display: block;
+        line-height: 2.3rem;
+        color: #ebebeb;
+        height: 100%;
+        width: 2.56rem;
+        text-align: center;
+        transition: color, background-color .3s ease-in;
+    }
+
+    .nav-thumb:hover,
+    .nav-thumb:focus {
+        background-color: #202529;
+        color: #fff;
+    }
+
+
+    .promo {
+        padding: 16.5vw 8vw 15.5vw;
+        background-color: #16b1c4;
+        background: linear-gradient(to right, #19b4c6, #0993ac);
+        font-size: 1.2rem;
+        color: #fff;
+        line-height: 1.18;
+    }
+
+    .promo a {
+        transition: all .3s ease-in;
+    }
+
+    .promo-title {
+        letter-spacing: 0.7px;
+    }
+
+    .promo-link {
+        margin-top: 0.8rem;
+        font-size: 0.57em;
+    }
+
+    .promo-link a {
+        color: #a6d4de;
+        text-decoration: none;
+        letter-spacing: 0.4px;
+    }
+
+    .promo-link a:hover {
+        color: #fff;
+    }
+
+    .promo-next {
+        display: inline-block;
+        font-size: 1.1em;
+        margin-left: 7.8em;
+        margin-top : 0.125rem;
+    }
+
+    .promo-next i {
+        color: #fff;
+    }
+
+    .comments {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comments-wrapper {
+        width: 78%;
+        background-color: #27212c;
+        overflow: hidden;
+    }
+
+    .comments ul {
+        width: 99999px;
+        transition: all .3s ease-in;
+    }
+
+    .comment {
+        font-size: 0.625rem;
+        line-height: 7.6em;
+        color: #7b6d87;
+        float: left;
+    }
+
+    .comment p {
+        margin: 0 1.625rem;
+    }
+
+    .comment-next {
+        line-height: 4.75em;
+        width: 22%;
+        background-color: #bc3183;
+        text-align: center;
+        transition: background-color .3s ease-in;
+    }
+
+    .comment-next:hover {
+        background-color: #992f62;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-wrapper {
+        overflow: hidden;
+    }
+
+    .slides {
+        width: 99999px;
+        transition: all .3s ease;
+    }
+
+    .slides::after {
+        display: table;
+        clear: both;
+        content: '';
+        overflow: hidden;
+    }
+
+    .slider-next {
+        padding-bottom: 0.4rem;
+        text-align: center;
+        background-color: #5b0fa1;
+        font-size: 2rem;
+        line-height: 8.4;
+        transition: background-color .3s ease-in;
+    }
+
+    .slider-next:hover {
+        background-color: #3f0f7f;
+    }
+
+    .slider-item {
+        margin-bottom: -2px;
+        width: 100vw;
+        float: left;
+    }
+
+    .slider-item img {
+        width: 100%;
+    }
+
+
+    .info {
+        padding: 1.8rem 2.2rem;
+        background-color: #ebebeb;
+        font-family: 'MyriadProRegular', sans-serif;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: #515151;
+    }
+
+    .info p {
+        margin-bottom: 1.8em;
+        font-size: 0.8rem;
+        line-height: 1.75;
+    }
+
+    .info-title {
+        margin: 0 0 1.1rem 1px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.15;
+    }
+
+    .info-title a {
+        text-decoration: none;
+        color: #088ca5;
+    }
+
+    .right-column {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+
+    .page-header {
+        height: 4.625rem;
+    }
+
+    .logo {
+        line-height: 4.625rem;
+        margin-left: 2.25rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .menu a {
+        padding: 2em 0;
+    }
+
+    .nav-thumb {
+        line-height: 4.625rem;
+        width: 5.125rem;
+        font-size: 2rem;
+    }
+
+    .promo {
+        padding: 6.75rem 3.2rem 6.2rem;
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+
+    .promo-title {
+        letter-spacing: 1.5px;
+    }
+
+    .promo-link {
+        margin-top: 1.6rem;
+    }
+
+    .promo-next {
+        margin-left: 7.8em;
+        margin-top: 0.3rem;
+    }
+
+    .comment {
+        font-size: 1.25rem;
+        line-height: 7.5;
+    }
+
+    .comment p {
+        margin: 2px 3.3rem 0;
+    }
+
+    .comment-next {
+        line-height: 5.75em;
+        font-size: 1.625rem;
+    }
+
+    .slider-next {
+        line-height: 9.5;
+        font-size: 3.5rem;
+        padding-bottom: 1.1rem;
+    }
+
+    .info {
+        padding: 3.7rem 4.5rem;
+        font-size: 1.375rem;
+        line-height: 2;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .info-title {
+        margin: 0 0 2.2rem 1px;
+        font-size: 1.875rem;
+        line-height: 1.45;
+    }
+
+    .info p {
+        font-size: 1.4rem;
+        line-height: 2.01;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        height: 6rem;
+        padding: 0 3.4rem;
+    }
+
+    #menu {
+        display: block;
+        position: static;
+        overflow: hidden;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .menu-item {
+        margin-right: 2.2rem;
+    }
+
+    .menu-item a {
+        border: none;
+        font-size: 0.9rem;
+        line-height: 7;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    .menu-item a:hover,
+    .menu-item a:focus {
+        background-color: transparent;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-thumb {
+        display: none;
+    }
+
+    .promo {
+        padding: 11.3rem 5rem 9.75rem;
+        font-size: 3.7rem;
+        line-height: 1.1;
+        letter-spacing: normal;
+    }
+
+    .promo-link {
+        margin-top: 2.5rem;
+    }
+
+    .promo-link a:hover ~ .promo-next {
+        transform: translateX(1rem);
+    }
+
+    .comment {
+        width: 78%;
+    }
+
+    .comment p {
+        margin: 0.5rem 5.125rem 0;
+        font-size: 2rem;
+        line-height: 7;
+        letter-spacing: -0.7px;
+    }
+
+    .comment-next {
+        line-height: 5.5;
+        font-size: 2.5rem;
+        width: 22%;
+    }
+
+    .slider {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 28.75vw;
+    }
+
+    .slider-next {
+        line-height: 27vw;
+        font-size: 2rem;
+        width: 33.333333%;
+    }
+
+    .slider-wrapper {
+        width: 66.66666%;
+    }
+
+    .slider-item {
+        display: block;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .slider-item::after {
+        clear: both;
+        overflow: hidden;
+        display: table;
+        content: '';
+    }
+
+    .slider-item img {
+        float: left;
+        width: 50%;
+    }
+
+    .info {
+        padding: 3.75rem 4.7rem;
+        font-size: 0.875rem;
+        line-height: 1.85;
+    }
+
+    .info-title {
+        margin: 0 0 0.8rem 1px;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+    }
+
+    .info-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-column,
+    .right-column {
+        width: 45%;
+        padding-left: 0.2rem;
+    }
+
+    .right-column {
+        display: block;
+        width: 46%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .promo {
+        padding: 19vw 8vw 16vw;
+        font-size: 3.8rem;
+    }
+
+    .promo-title {
+        letter-spacing: 2.5px;
+    }
+
+    .promo-link {
+        margin-top: 2.75rem;
+    }
+
+    .promo-link a {
+        letter-spacing: 1.5px;
+    }
+
+    .comment {
+        font-size: 1.375rem;
+        line-height: 11;
+    }
+
+    .comment p {
+        margin: 0.2rem 5.125rem 0;
+        font-size: 2rem;
+        line-height: 7.5;
+        letter-spacing: 0.2px;
+    }
+
+    .comment-next {
+        line-height: 5.75;
+        font-size: 2.5rem;
+    }
+
+    .slider {
+        height: 28.6vw;
+    }
+
+    .info {
+        padding: 2.9rem 4.85rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+        line-height: 2.1;
+        margin-bottom: 2rem;
+    }
+
+    .left-column {
+        width: 48%;
+    }
+
+    .right-column {
+        width: 46.5%;
+    }
+}
